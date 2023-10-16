@@ -24,6 +24,10 @@ void Person::set(int n){
 	age = n;
 	}
 
+	int Person::fib(){
+	return _fib(age);
+	}
+
 
 extern "C"{
 	Person* Person_new(int n) {return new Person(n);}
