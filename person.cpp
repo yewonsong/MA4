@@ -19,12 +19,23 @@ Person::Person(int n){
 int Person::get(){
 	return age;
 	}
- 
+
+int Person::fib(){
+	return _fib(age)
+	}
+
+int Person::_fib(int n){
+	if (n<=1)
+		return n
+	else
+		return _fib(n-1)+_fib(n-2)
+	}
+
 void Person::set(int n){
 	age = n;
 	}
 
-	int Person::fib(){
+int Person::fib(){
 	return _fib(age);
 	}
 
@@ -39,4 +50,6 @@ extern "C"{
 			person = nullptr;
 			}
 		}
+	int Person_fib(Person* person) {return person->fib();}
+	int Person__fib(Person* person, int n){return person->_fib(n)}
 	}
