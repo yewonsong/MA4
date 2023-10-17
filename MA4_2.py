@@ -30,7 +30,7 @@ def main():
     
 	time_numba = []
     
-	for i in range(30,46):
+	for i in range(30,36):
         
 		start = pc()
 		f = Person(i)
@@ -48,7 +48,7 @@ def main():
 		end = pc()
 		time_numba.append(end-start)
 	
-	x_coor = [ i for i in range(30,46)]
+	x_coor = [ i for i in range(30,36)]
 	plt.plot(x_coor, time_c, 'r', x_coor, time_py, 'g', x_coor, time_numba, 'b') 
 	plt.savefig('fib comparision graph')
     #  print(f.get())
