@@ -66,23 +66,22 @@ def main():
     
 	time2_c = []
 	time2_numba = []
-	for i in range(30,46):
-          start = pc()
-          f = Person(i)
-          f.fib()
-          end = pc()
-          time2_c.append(end-start)
+	for i in range(20,31):
+         start = pc()
+         f = Person(i)
+         f.fib()
+         end = pc()
+         time2_c.append(end-start)
           
-          start = pc()
-          fib_numba(i)
-          end = pc()
-          time2_numba.append(end-start)
-	
-	x_coor2 = [i for i in range(30,46)]
-    plt.plot(x_coor2, time2_c, 'r', x_coor2, time2_numba, 'g')
-    plt.title("red: C++, green: numba")
+         start = pc()
+         fib_numba(i)
+         end = pc()
+         time2_numba.append(end-start)
+	x_coor2 = [i for i in range(20,31)]
+	plt.plot(x_coor2, time2_c, 'r', x_coor2, time2_numba, 'g')
+	plt.title("red: C++, green: numba")
 	plt.savefig('C++ and numba comparision')
-	
+
 
 
     #  print(f.get())
