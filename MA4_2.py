@@ -41,7 +41,7 @@ def main():
 		start = pc()
 		fib_py(i)
 		end = pc()
-		time_py.appen(end - start)
+		time_py.append(end - start)
           
 		start = pc()
 		fib_numba(i)
