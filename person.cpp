@@ -45,5 +45,5 @@ extern "C"{
 			}
 		}
 	int Person_fib(Person* person) {return person->fib();}
-	int Person__fib(Person* person, int n){return person->_fib(n);}
+	//int Person__fib(Person* person, int n){return person->_fib(n);}
 	}
