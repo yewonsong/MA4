@@ -50,19 +50,14 @@ def main():
 	
 	x_coor = [ i for i in range(30,46)]
 	plt.plot(x_coor, time_c, 'r', x_coor, time_py, 'g', x_coor, time_numba, 'b') 
-	plt.title("red: C++, green: python, blue: numba")
+	plt.title("Red: C++, Green: python, Blue: numba")
 	plt.savefig('fib comparision graph')
      
-	start = pc()
-	f = Person(47)
-	f.fib()
-	end = pc()
-	print(f"Fibonacci number for n=47, c++ {end-start}")
-     
-	start = pc()
-	fib_numba(47)
-	end = pc()
-	print(f"Fibonacci number for n=47, numba {end-start}")
+	
+	f = Person(47)	
+	print(f"Fibonacci number for n=47, c++ {f.fib()}")
+
+	print(f"Fibonacci number for n=47, numba {fib_numba(47)}")
     
 	time2_c = []
 	time2_numba = []
@@ -79,7 +74,7 @@ def main():
          time2_numba.append(end-start)
 	x_coor2 = [i for i in range(20,31)]
 	plt.plot(x_coor2, time2_c, 'r', x_coor2, time2_numba, 'g')
-	plt.title("red: C++, green: numba")
+	plt.title("Red: C++, Green: numba")
 	plt.savefig('C++ and numba comparision')
 
 
