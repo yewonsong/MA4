@@ -1,7 +1,8 @@
 
 """ Python interface to the C++ Person class """
 import ctypes
-lib = ctypes.cdll.LoadLibrary('./libperson.so')
+#lib = ctypes.cdll.LoadLibrary('./libperson.so')
+lib = ctypes.cdll.LoadLibrary('C:/Users/송예원/OneDrive - 연세대학교 (Yonsei University)/Uppsala/ComputerProgramming2/MA4-2/MA4/libperson.so')
 
 class Person(object):
 	def __init__(self, age):

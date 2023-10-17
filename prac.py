@@ -1,11 +1,8 @@
 from time import perf_counter as pc
-from time import sleep as pause
+#from time import sleep as pause
 # import multiprocessing as mp
 
-def runner(n):
-    print("performing a costly function")
-    pause(n)
-    print(f"function {n} complete")
+#
 
 
 # # if __name__ == "__main__":
@@ -62,13 +59,7 @@ import concurrent.futures as future
 if __name__ == "__main__":
     start = pc()
 
-    with future.ThreadPoolExecutor() as ex:
-        p = [5,4,3,2,1]
-        results = ex.map(runner, p)
-
-        # for r in results:
-        #     print(r)
-
+    
     end = pc()
 
     print(f"Process took {round(end-start,2)}")
