@@ -59,23 +59,23 @@ def main():
 
 	print(f"Fibonacci number for n=47, numba {fib_numba(47)}")
     
-	time2_c = []
-	time2_numba = []
-	for i in range(20,31):
-         start = pc()
-         f = Person(i)
-         f.fib()
-         end = pc()
-         time2_c.append(end-start)
+	# time2_c = []
+	# time2_numba = []
+	# for i in range(20,31):
+    #      start = pc()
+    #      f = Person(i)
+    #      f.fib()
+    #      end = pc()
+    #      time2_c.append(end-start)
           
-         start = pc()
-         fib_numba(i)
-         end = pc()
-         time2_numba.append(end-start)
-	x_coor2 = [i for i in range(20,31)]
-	plt.plot(x_coor2, time2_c, 'r', x_coor2, time2_numba, 'g')
-	plt.title("Red: C++, Green: numba")
-	plt.savefig('C++ and numba comparision')
+    #      start = pc()
+    #      fib_numba(i)
+    #      end = pc()
+    #      time2_numba.append(end-start)
+	# x_coor2 = [i for i in range(20,31)]
+	# plt.plot(x_coor2, time2_c, 'r', x_coor2, time2_numba, 'g')
+	# plt.title("Red: C++, Green: numba")
+	# plt.savefig('C++ and numba comparision')
 
 
 

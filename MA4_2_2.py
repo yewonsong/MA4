@@ -41,9 +41,13 @@ def main():
     plt.savefig('C++ and numba comparision')
 
 
-    for i in range(47):
+    for i in range(20):
         f = Person(i)
         print(f'{i} fib is {f.fib()}')
+    
+    f = Person(47)	
+    print(f"Fibonacci number for n=47, c++ {f.fib()}")
+    print(f"Fibonacci number for n=47, numba {fib_numba(47)}")
 
 
 if __name__ == '__main__':
