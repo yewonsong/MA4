@@ -23,11 +23,8 @@ from person import Person
 
 def main():
      
-    
 	time_c = []
-    
 	time_py = []
-    
 	time_numba = []
     
 	for i in range(30,46):
@@ -51,7 +48,26 @@ def main():
 	x_coor = [ i for i in range(30,46)]
 	plt.plot(x_coor, time_c, 'r', x_coor, time_py, 'g', x_coor, time_numba, 'b') 
 	plt.title("Red: C++, Green: python, Blue: numba")
-	plt.savefig('fib comparision graph')
+	plt.savefig('fib comparision from 30 to 47')
+     
+
+	time2_c = []
+	time2_numba = []
+	for i in range(20,31):
+		start = pc()
+		f = Person(i)
+		f.fib()
+		end = pc()
+		time2_c.append(end-start)
+          
+		start = pc()
+		fib_numba(i)
+		end = pc()
+		time2_numba.append(end-start)
+	x_coor2 = [i for i in range(20,31)]
+	plt.plot(x_coor2, time2_c, 'r', x_coor2, time2_numba, 'g')
+	plt.title("Red: C++, Green: numba")
+	plt.savefig('C++ and numba comparision')
      
 	
 	f = Person(47)	
@@ -59,41 +75,5 @@ def main():
 
 	print(f"Fibonacci number for n=47, numba {fib_numba(47)}")
     
-	# time2_c = []
-	# time2_numba = []
-	# for i in range(20,31):
-    #      start = pc()
-    #      f = Person(i)
-    #      f.fib()
-    #      end = pc()
-    #      time2_c.append(end-start)
-          
-    #      start = pc()
-    #      fib_numba(i)
-    #      end = pc()
-    #      time2_numba.append(end-start)
-	# x_coor2 = [i for i in range(20,31)]
-	# plt.plot(x_coor2, time2_c, 'r', x_coor2, time2_numba, 'g')
-	# plt.title("Red: C++, Green: numba")
-	# plt.savefig('C++ and numba comparision')
-
-
-
-    #  print(f.get())
-    #  f.set(7)
-    #  print(f.fib())
-    #  print(fib_py(10))
-    #  print(fib_numba(10))     
-	#n = 10
-    #start = pc()
-	#f = Person(n)
-    #f.fib()
-	#end = pc()
-	#print(f"Process took {round(end-start)} seconds")
-
-	#f.fib(10)
-      
-
-
 if __name__ == '__main__':
 	main()
