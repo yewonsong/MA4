@@ -47,6 +47,8 @@ def main():
     
     f = Person(47)	
     print(f"Fibonacci number for n=47, c++ {f.fib()}")
+    f = Person(47)
+    print(f.fib(), "47 test")
     print(f"Fibonacci number for n=47, numba {fib_numba(47)}")
 
 
