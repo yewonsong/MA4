@@ -41,7 +41,7 @@ def main():
     plt.savefig('C++ and numba comparision')
 
 
-    for i in range(15):
+    for i in range(47):
         f = Person(i)
         print(f'{i} fib is {f.fib()}')
 
