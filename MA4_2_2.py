@@ -40,5 +40,11 @@ def main():
     plt.title("Red: C++, Green: numba")
     plt.savefig('C++ and numba comparision')
 
+
+    for i in range(15):
+        f = Person(i)
+        print(f'{i} fib is {f.fib()}')
+
+
 if __name__ == '__main__':
 	main()
