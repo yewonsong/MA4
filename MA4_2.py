@@ -30,7 +30,7 @@ def main():
     
 	time_numba = []
     
-	for i in range(30,36):
+	for i in range(30,46):
         
 		start = pc()
 		f = Person(i)
@@ -48,9 +48,21 @@ def main():
 		end = pc()
 		time_numba.append(end-start)
 	
-	x_coor = [ i for i in range(30,36)]
+	x_coor = [ i for i in range(30,46)]
 	plt.plot(x_coor, time_c, 'r', x_coor, time_py, 'g', x_coor, time_numba, 'b') 
+	plt.title("red: C++, green: python, blue: numba")
 	plt.savefig('fib comparision graph')
+     
+	start = pc()
+	f = Person(47)
+	f.fib()
+	end = pc()
+	print(f"Fibonacci number for n=47, c++ {end-start}")
+     
+	start = pc()
+	fib_numba(47)
+	end = pc()
+	print(f"Fibonacci number for n=47, numba {end-start}")
     #  print(f.get())
     #  f.set(7)
     #  print(f.fib())
